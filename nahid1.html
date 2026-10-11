@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahid Hasan | Personal Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        darkBg: '#0f172a',
+                        cardDark: 'rgba(30, 41, 59, 0.7)',
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .glass {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white transition-colors duration-300">
+
+    <!-- Background Glow Effects -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse"></div>
+    <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse" style="animation-delay: 2s;"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="p-2 bg-indigo-600 rounded-lg text-white font-mono text-xl">< NH /></span>
+                <span class="hidden sm:inline">Nahid Hasan</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+                <a href="#achievements" class="hover:text-indigo-400 transition-colors">Achievements</a>
+                <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl hover:shadow-lg hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    Student | Medical Aspirant | Dreamer
+                </div>
+                <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                 I'm <span class="text-gradient">Nahid Hasan</span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
+                    An HSC'27 Candidate with a passion for learning and problem-solving, aspiring to earn a chance at Dhaka Medical College (DMC).
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="px-6 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all shadow-lg shadow-indigo-600/30 flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-code"></i> View Projects
+                    </a>
+                    <a href="#achievements" class="px-6 py-3.5 glass hover:bg-slate-800/80 text-white font-medium rounded-xl transition-all border border-slate-700 flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-trophy text-amber-400"></i> My Achievements
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-12 flex items-center gap-6 text-slate-400">
+                    <a href="https://www.facebook.com/iamnahidh" target="_blank" class="hover:text-indigo-400 text-2xl transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/iam_nahidhasan.official" target="_blank" class="hover:text-indigo-400 text-2xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:nahidh9414@gmail.com" class="hover:text-indigo-400 text-2xl transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="flex justify-center relative" data-aos="fade-left" data-aos-duration="1000">
+                <div class="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden glass p-3 relative group animate-float border border-indigo-500/20">
+                    <div class="w-full h-full rounded-2xl overflow-hidden relative">
+ <img src="profile.jpg" alt="Nahid Hasan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gradient inline-block mb-3">About Me</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">Driven by ambition, logic, and dedication toward medical & academic excellence.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-indigo-600/20 text-indigo-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Medical Aspirant</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Dedicated to pursuing higher education at Dhaka Medical College (DMC) and building a solid foundation in Biology, Chemistry, and Physics.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">HSC '27 Journey</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Currently preparing as an HSC 2027 candidate with strong focus on understanding fundamental scientific concepts step-by-step.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition-all hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-pink-600/20 text-pink-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Competitions & Logic</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Enthusiastic participant in national olympiads and competitions including Programming Contests and Economics Olympiad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Olympiads Section -->
+    <section id="achievements" class="py-24 px-6 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gradient inline-block mb-3">Olympiads & Achievements</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">Competitions and national rounds participated in.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Achievement 1 -->
+                <div class="glass p-6 rounded-2xl relative overflow-hidden group hover:border-amber-500/50 transition-all" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Economics Olympiad 2025</h4>
+                            <span class="text-xs text-slate-400">Bangladesh Economics Olympiad</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">Participated in the Bangladesh Economics Olympiad 2025, exploring economic concepts, analytical thinking, and policy logic.</p>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="glass p-6 rounded-2xl relative overflow-hidden group hover:border-indigo-500/50 transition-all" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">NHSPC 2025</h4>
+                            <span class="text-xs text-slate-400">National High School Programming Contest</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">Participated in NHSPC 2025, focusing on basic programming concepts, logical puzzle solving, and algorithmic thinking.</p>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="glass p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500/50 transition-all" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">NHSPC 2026</h4>
+                            <span class="text-xs text-slate-400">National High School Programming Contest</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">Continued participation in NHSPC 2026 to further sharpen computational logic and problem-solving abilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gradient inline-block mb-3">Skills & Expertise</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">Technical abilities and programming foundation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="glass p-6 rounded-2xl space-y-4" data-aos="fade-right">
+                    <h3 class="font-bold text-lg mb-4 text-indigo-400"><i class="fa-solid fa-code mr-2"></i> Programming</h3>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>C Programming</span>
+                            <span class="text-indigo-400">10%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl space-y-4" data-aos="fade-left">
+                    <h3 class="font-bold text-lg mb-4 text-purple-400"><i class="fa-solid fa-stethoscope mr-2"></i> Medical Prep & Science</h3>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Biology & Medical Preparation</span>
+                            <span class="text-purple-400">Active</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gradient inline-block mb-3">Projects</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">Key initiatives and project ideas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="glass rounded-2xl overflow-hidden group hover:border-indigo-500/50 transition-all" data-aos="fade-up">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-purple-600/30 flex items-center justify-center">
+                            <i class="fa-solid fa-user-md text-6xl text-white/40 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Journey Of Being Medical Student</h3>
+                        <p class="text-slate-400 text-sm mb-4">A project focused on medical study resources, conceptual learning guides, and DMC admission preparation tracking.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass rounded-2xl overflow-hidden group hover:border-indigo-500/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-pink-600/30 flex items-center justify-center">
+                            <i class="fa-solid fa-graduation-cap text-6xl text-white/40 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Journey of Edtech Platform</h3>
+                        <p class="text-slate-400 text-sm mb-4">An educational technology platform initiative aimed at simplifying complex topics for HSC and admission candidates.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass rounded-2xl overflow-hidden group hover:border-indigo-500/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/30 to-teal-600/30 flex items-center justify-center">
+                            <i class="fa-solid fa-map-location-dot text-6xl text-white/40 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">How I Travel Bangladesh</h3>
+                        <p class="text-slate-400 text-sm mb-4">An interactive travel project showcasing the beauty, culture, and famous destinations across Bangladesh.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="glass rounded-2xl overflow-hidden group hover:border-indigo-500/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-600/30 to-rose-600/30 flex items-center justify-center">
+                            <i class="fa-solid fa-earth-americas text-6xl text-white/40 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">How I Travel World</h3>
+                        <p class="text-slate-400 text-sm mb-4">A global travel exploration concept designed to feature iconic international landmarks and travel itineraries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative">
+        <div class="max-w-4xl mx-auto glass p-8 sm:p-12 rounded-3xl border border-slate-800" data-aos="fade-up">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gradient inline-block mb-3">Let's Connect</h2>
+                <p class="text-slate-400">Feel free to reach out for collaborations or learning discussions!</p>
+            </div>
+
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Name</label>
+                        <input type="text" class="w-full bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email</label>
+                        <input type="email" class="w-full bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500 transition-colors" placeholder="your@email.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Message</label>
+                    <textarea rows="4" class="w-full bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500 transition-colors" placeholder="Say something..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-indigo-500/25 transition-all">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800 text-center text-sm text-slate-500">
+        <p>© 2026 Nahid Hasan. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS Animation JS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
